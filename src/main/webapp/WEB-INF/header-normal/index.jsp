@@ -18,7 +18,7 @@
                     <a href="list-category" class="turquoise bold">Category List</a>
                 </li>
                 <li>
-                    <a href="#" class="turquoise bold">Login</a>
+                    <a href="login" class="turquoise bold">Login</a>
                 </li>
                 <li>
                     <a href="#" class="turquoise bold">&#128269;</a>

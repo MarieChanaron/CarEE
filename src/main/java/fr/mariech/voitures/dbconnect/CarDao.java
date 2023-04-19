@@ -21,7 +21,7 @@ public class CarDao {
                 String description = results.getString(2);
                 String image = results.getString(3);
                 String category = results.getString(4);
-                int price = results.getInt(5);
+                double price = results.getDouble(5);
                 Car car = new Car(name, description, image, category, price);
                 System.out.println(car);
                 System.out.println(car);

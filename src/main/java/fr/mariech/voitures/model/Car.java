@@ -6,10 +6,10 @@ public class Car {
     private String description;
     private String image;
     private String category;
-    private int price;
+    private double price;
 
 
-    public Car(String name, String description, String image, String category, int price) {
+    public Car(String name, String description, String image, String category, double price) {
         this.name = name;
         this.description = description;
         this.image = image;
@@ -49,7 +49,7 @@ public class Car {
         this.category = category;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
