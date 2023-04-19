@@ -22,7 +22,7 @@
                         <a href="#">
                             <button>EDIT</button>
                         </a>
-                        <a href="#">
+                        <a href="delete-category?id=${cat.id}">
                             <button class="red">DELETE</button>
                         </a>
                     </div>

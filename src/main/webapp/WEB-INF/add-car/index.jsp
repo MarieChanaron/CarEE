@@ -26,7 +26,7 @@
             <input name="name" type="text" placeholder="Name" autocomplete="off"/>
             <input name="description" type="text" placeholder="Description" autocomplete="off"/>
             <input name="image" type="text" placeholder="http://image-link" autocomplete="off"/>
-            <input name="price" type="number" placeholder="70000" autocomplete="off"/>
+            <input name="price" type="number" placeholder="70000" step=".01" autocomplete="off"/>
             <button type="submit">Add car</button>
         </form>
     </div>

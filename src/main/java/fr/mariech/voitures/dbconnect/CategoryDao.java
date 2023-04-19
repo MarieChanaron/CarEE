@@ -13,12 +13,13 @@ public class CategoryDao {
     public List<Category> fetchCategories() {
         List<Category> categories = new ArrayList<>();
         try {
-            String query = "SELECT name FROM category";
+            String query = "SELECT id, name FROM category";
             Statement statement = connectionToDb.createStatement();
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
-                String name = results.getString(1);
-                Category category = new Category(name);
+                int id = results.getInt(1);
+                String name = results.getString(2);
+                Category category = new Category(id, name);
                 System.out.println(category);
                 categories.add(category);
             }
@@ -33,6 +34,18 @@ public class CategoryDao {
             String query = "INSERT INTO category (name) VALUES (?)";
             PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
             preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
+
+
+    public void deleteCategory(String id) {
+        try {
+            String query = "DELETE FROM category WHERE id = ?;";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException error) {
             error.printStackTrace();

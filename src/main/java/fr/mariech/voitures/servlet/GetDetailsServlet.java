@@ -20,7 +20,6 @@ public class GetDetailsServlet extends HttpServlet {
         System.out.println(car);
         HttpSession session = request.getSession();
         session.setAttribute("thisCar", car);
-        session.setAttribute("thisCarId", carId);
         response.sendRedirect("/details-car");
     }
 

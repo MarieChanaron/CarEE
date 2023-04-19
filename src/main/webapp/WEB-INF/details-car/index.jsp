@@ -31,7 +31,7 @@
                     <a href="#">
                         <button>EDIT</button>
                     </a>
-                    <a href="delete-car?id=${thisCarId}">
+                    <a href="delete-car?id=${thisCar.id}">
                         <button class="red">DELETE</button>
                     </a>
                 </div>
