@@ -18,11 +18,16 @@
     <div id="add-car-section" class="section dark-bg padding">
         <h1>Add Car</h1>
         <form action="add-car" method="post">
+            <select name="category">
+                <c:forEach var="cat" items="${categories}">
+                    <option value="${cat.name}">${cat.name}</option>
+                </c:forEach>
+            </select>
             <input name="name" type="text" placeholder="Name" autocomplete="off"/>
             <input name="description" type="text" placeholder="Description" autocomplete="off"/>
             <input name="image" type="text" placeholder="http://image-link" autocomplete="off"/>
             <input name="price" type="number" placeholder="70000" autocomplete="off"/>
-            <button type="submit">Login</button>
+            <button type="submit">Add car</button>
         </form>
     </div>
 

@@ -12,7 +12,8 @@
     grid-gap: 16px;
 }
 
-#add-car-section form input {
+#add-car-section form input,
+#add-car-section form select {
     padding-top: 4px;
     padding-bottom: 4px;
     padding-left: 4px;
