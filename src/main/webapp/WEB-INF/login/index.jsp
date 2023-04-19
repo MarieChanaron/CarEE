@@ -18,9 +18,9 @@
 
     <div id="login-section" class="section dark-bg padding">
         <h1>Login page</h1>
-        <form action="auth/list-car" method="post">
-            <input type="text" />
-            <input type="password">
+        <form action="connect" method="post">
+            <input name="login" type="text" />
+            <input name="password" type="password" />
             <button type="submit">Login</button>
         </form>
     </div>
