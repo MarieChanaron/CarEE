@@ -18,6 +18,7 @@ public class ListCarServlet extends HttpServlet {
             System.out.println("In list-car servlet");
             CarDao carDao = new CarDao();
             List<Car> cars = carDao.fetchCars();
+            System.out.println(cars);
             session.setAttribute("cars", cars);
             request.getRequestDispatcher("/WEB-INF/list-cars/").forward(request, response);
         }

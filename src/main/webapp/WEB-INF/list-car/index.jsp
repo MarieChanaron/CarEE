@@ -22,11 +22,11 @@
                     <p>${car.name}</p>
                     <p>${car.category}</p>
                     <div class="btn-div">
-                        <a href="get-details?id=${loop.index+1}">
+                        <a href="get-details?id=${car.id}">
                             <button>DETAILS</button>
                         </a>
                         <c:if test="${logged}">
-                            <a href="#">
+                            <a href="delete-car?id=${car.id}">
                                 <button class="red">DELETE</button>
                             </a>
                         </c:if>

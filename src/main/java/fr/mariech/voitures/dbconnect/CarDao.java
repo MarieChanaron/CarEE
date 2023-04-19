@@ -12,19 +12,20 @@ public class CarDao {
     private final Connection connectionToDb = ConnectionManager.openConnection();
 
     public List<Car> fetchCars() {
+        System.out.println("in fetch cars function");
         List<Car> cars = new ArrayList<>();
         try {
-            String query = "SELECT car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category";
+            String query = "SELECT car.id, car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category";
             Statement statement = connectionToDb.createStatement();
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
-                String name = results.getString(1);
-                String description = results.getString(2);
-                String image = results.getString(3);
-                String category = results.getString(4);
-                double price = results.getDouble(5);
-                Car car = new Car(name, description, image, category, price);
-                System.out.println(car);
+                int id = results.getInt(1);
+                String name = results.getString(2);
+                String description = results.getString(3);
+                String image = results.getString(4);
+                String category = results.getString(5);
+                double price = results.getDouble(6);
+                Car car = new Car(id, name, description, image, category, price);
                 System.out.println(car);
                 cars.add(car);
             }
@@ -37,17 +38,18 @@ public class CarDao {
     public Car fetchOneCar(String id) {
         Car retrievedCar = null;
         try {
-            String query = "SELECT car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category AND car.id = ?;";
+            String query = "SELECT car.id, car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category AND car.id = ?;";
             PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
             preparedStatement.setString(1, id);
             ResultSet results = preparedStatement.executeQuery();
             while (results.next()) {
-                String name = results.getString(1);
-                String description = results.getString(2);
-                String image = results.getString(3);
-                String category = results.getString(4);
-                double price = results.getDouble(5);
-                retrievedCar = new Car(name, description, image, category, price);
+                int intId = Integer.parseInt(id);
+                String name = results.getString(2);
+                String description = results.getString(3);
+                String image = results.getString(4);
+                String category = results.getString(5);
+                double price = results.getDouble(6);
+                retrievedCar = new Car(intId, name, description, image, category, price);
                 System.out.println(retrievedCar);
             }
         } catch (SQLException error) {
@@ -65,6 +67,17 @@ public class CarDao {
             preparedStatement.setString(3, image);
             preparedStatement.setInt(4, category);
             preparedStatement.setDouble(5, price);
+            preparedStatement.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
+
+    public void deleteCar(String id) {
+        try {
+            String query = "DELETE FROM car WHERE id = ?;";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, id);
             preparedStatement.executeUpdate();
         } catch (SQLException error) {
             error.printStackTrace();

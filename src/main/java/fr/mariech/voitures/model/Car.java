@@ -2,12 +2,21 @@ package fr.mariech.voitures.model;
 
 public class Car {
 
+    private int id;
     private String name;
     private String description;
     private String image;
     private String category;
     private double price;
 
+    public Car(int id, String name, String description, String image, String category, double price) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.image = image;
+        this.category = category;
+        this.price = price;
+    }
 
     public Car(String name, String description, String image, String category, double price) {
         this.name = name;
@@ -15,6 +24,10 @@ public class Car {
         this.image = image;
         this.category = category;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -57,10 +70,12 @@ public class Car {
         this.price = price;
     }
 
+
     @Override
     public String toString() {
         return "Car{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 ", category='" + category + '\'' +

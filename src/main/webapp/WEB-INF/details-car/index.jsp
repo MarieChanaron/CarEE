@@ -26,6 +26,16 @@
             <p id="car-description">${thisCar.description}</p>
             <p id="car-price">PRICE: $${thisCar.price}</p>
             <p id="car-category">${thisCar.category}</p>
+            <c:if test="${logged}">
+                <div class="btn-div">
+                    <a href="#">
+                        <button>EDIT</button>
+                    </a>
+                    <a href="delete-car?id=${thisCarId}">
+                        <button class="red">DELETE</button>
+                    </a>
+                </div>
+            </c:if>
         </div>
     </div>
 
