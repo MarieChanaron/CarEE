@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="#" class="turquoise bold">Home</a></li>
                 <li>
-                    <a href="#" class="turquoise bold">Category List</a>
+                    <a href="list-category" class="turquoise bold">Category List</a>
                 </li>
                 <li>
                     <a href="#" class="turquoise bold">Login</a>

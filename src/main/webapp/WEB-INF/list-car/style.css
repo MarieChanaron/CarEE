@@ -1,0 +1,27 @@
+.car-card {
+    width: 300px;
+    height: fit-content;
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.img-container {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.car-card .text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+
+.car-card a {
+    width: fit-content;
+}

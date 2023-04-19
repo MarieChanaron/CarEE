@@ -13,16 +13,17 @@ public class CarDao {
     public List<Car> fetchCars() {
         List<Car> cars = new ArrayList<>();
         try {
-            String query = "SELECT * FROM car";
+            String query = "SELECT name, description, image, category.nom, price FROM car INNER JOIN category WHERE category.id = car.category";
             Statement statement = connectionToDb.createStatement();
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
-                String name = results.getString("name");
-                String description = results.getString("description");
-                String image = results.getString("image");
-                String category = results.getString("category");
-                int price = results.getInt("price");
+                String name = results.getString(1);
+                String description = results.getString(2);
+                String image = results.getString(3);
+                String category = results.getString(4);
+                int price = results.getInt(5);
                 Car car = new Car(name, description, image, category, price);
+                System.out.println(car);
                 System.out.println(car);
                 cars.add(car);
             }
