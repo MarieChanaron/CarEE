@@ -15,7 +15,6 @@ import java.util.List;
 public class ListCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("in list category servlet");
         request.getRequestDispatcher("/WEB-INF/list-category/").forward(request, response);
     }
 

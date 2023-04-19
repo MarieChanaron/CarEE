@@ -1,0 +1,14 @@
+.cat-container {
+    width: 180px;
+    height: 50px;
+    padding-left: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cat-container span {
+    text-transform: uppercase;
+    font-weight: 600;
+}

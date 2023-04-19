@@ -3,7 +3,8 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <style><%@include file="../global-css.css"%></style>
+    <style><%@include file="style.css"%></style>
 </head>
 
 
@@ -14,9 +15,9 @@
             <c:import url="/fetch-categories" />
         </c:if>
         <c:forEach var="cat" items="${categories}">
-            <p class="cat-container">
-                ${cat.name}
-            </p>
+            <div class="cat-container">
+                <span>${cat.name}</span>
+            </div>
         </c:forEach>
     </div>
 
