@@ -9,27 +9,31 @@
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li>
-            <a href="#">Category List</a>
-        </li>
-        <li>
-            <a href="#">Administration</a>
+    <header class="padding">
+        <p style="font-size: 32px">&#128664;</p>
+        <nav>
             <ul>
-                <li><a href="#">Add Car</a></li>
-                <li><a href="#">Add Category</a></li>
+                <li><a href="home" class="turquoise bold">Home</a></li>
+                <li>
+                    <a href="list-category" class="turquoise bold">Category List</a>
+                </li>
+                <li>
+                    <a href="#" class="turquoise bold">Administration</a>
+                    <ul>
+                        <li><a href="add-car" class="turquoise bold">Add Car</a></li>
+                        <li><a href="add-category" class="turquoise bold">Add Category</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="logout" class="turquoise bold">Logout</a>
+                </li>
+                <li>
+                    <a href="#">&#128269;</a>
+                </li>
             </ul>
-        </li>
-        <li>
-            <a href="logout">Logout</a>
-        </li>
-        <li>
-            <a href="#">Icon</a>
-        </li>
-    </ul>
-</nav>
+        </nav>
+
+    </header>
 
 </body>
 </html>

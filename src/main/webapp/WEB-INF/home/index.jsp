@@ -24,6 +24,14 @@
         </c:otherwise>
     </c:choose>
 
+    <c:if test="${logged}">
+        <div class="section block-center">
+            <a href="/auth/add-car">
+                <button>Add car</button>
+            </a>
+        </div>
+    </c:if>
+
     <c:import url="../list-car/" />
 </body>
 

@@ -21,7 +21,7 @@
                     <a href="login" class="turquoise bold">Login</a>
                 </li>
                 <li>
-                    <a href="#" class="turquoise bold">&#128269;</a>
+                    <a href="#">&#128269;</a>
                 </li>
             </ul>
         </nav>

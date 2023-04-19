@@ -1,0 +1,8 @@
+.cat-container {
+    display: none;
+}
+
+#list-categories .cat-container {
+    display: inline-flex;
+    align-items: center;
+}

@@ -1,0 +1,20 @@
+#add-car-section {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+}
+
+#add-car-section form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 16px;
+}
+
+#add-car-section form input {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    width: 300px;
+}
