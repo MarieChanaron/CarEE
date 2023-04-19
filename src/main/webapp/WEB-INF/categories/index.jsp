@@ -19,7 +19,7 @@
                 <span>${cat.name}</span>
                 <c:if test="${logged}">
                     <div class="btn-div">
-                        <a href="update-category?id=${cat.id}">
+                        <a href="update-category?id=${cat.id}&name=${cat.name}">
                             <button>EDIT</button>
                         </a>
                         <a href="delete-category?id=${cat.id}">

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<c:import url="../header-secured/" />
+    <c:import url="../header-secured/" />
 
     <div id="add-category-section" class="section dark-bg padding">
         <h1>Add Category</h1>

@@ -40,6 +40,18 @@ public class CategoryDao {
         }
     }
 
+    public void updateCategory(String id, String name) {
+        try {
+            String query = "UPDATE category SET name = ? WHERE id = ?";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, id);
+            preparedStatement.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
+
 
     public void deleteCategory(String id) {
         try {
