@@ -20,7 +20,6 @@ public class CategoryDao {
                 int id = results.getInt(1);
                 String name = results.getString(2);
                 Category category = new Category(id, name);
-                System.out.println(category);
                 categories.add(category);
             }
         } catch (SQLException error) {

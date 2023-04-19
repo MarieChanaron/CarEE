@@ -13,7 +13,6 @@ public class DeleteCarServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String carId = request.getParameter("id");
-        System.out.println(carId);
         CarDao carDao = new CarDao();
         carDao.deleteCar(carId);
         HttpSession session = request.getSession();

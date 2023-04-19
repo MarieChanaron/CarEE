@@ -12,7 +12,6 @@ public class CarDao {
     private final Connection connectionToDb = ConnectionManager.openConnection();
 
     public List<Car> fetchCars() {
-        System.out.println("in fetch cars function");
         List<Car> cars = new ArrayList<>();
         try {
             String query = "SELECT car.id, car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category";
@@ -26,7 +25,6 @@ public class CarDao {
                 String category = results.getString(5);
                 double price = results.getDouble(6);
                 Car car = new Car(id, name, description, image, category, price);
-                System.out.println(car);
                 cars.add(car);
             }
         } catch (SQLException error) {

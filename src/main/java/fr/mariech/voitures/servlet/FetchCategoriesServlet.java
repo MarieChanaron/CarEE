@@ -13,12 +13,10 @@ import java.util.List;
 public class FetchCategoriesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("fetching categories");
         HttpSession session = request.getSession();
         if (session.getAttribute("categories") == null) {
             CategoryDao categoryDao = new CategoryDao();
             List<Category> categories = categoryDao.fetchCategories();
-            System.out.println(categories);
             session.setAttribute("categories", categories);
         }
     }

@@ -17,7 +17,6 @@ public class ListCarServlet extends HttpServlet {
         if (session.getAttribute("cars") == null) {
             CarDao carDao = new CarDao();
             List<Car> cars = carDao.fetchCars();
-            System.out.println(cars);
             session.setAttribute("cars", cars);
         }
     }

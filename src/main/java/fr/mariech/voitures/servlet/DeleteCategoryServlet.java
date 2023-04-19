@@ -11,9 +11,7 @@ import java.io.IOException;
 public class DeleteCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("in delete category GET method");
         String categoryId = request.getParameter("id");
-        System.out.println(categoryId);
         CategoryDao categoryDao = new CategoryDao();
         categoryDao.deleteCategory(categoryId);
         HttpSession session = request.getSession();
