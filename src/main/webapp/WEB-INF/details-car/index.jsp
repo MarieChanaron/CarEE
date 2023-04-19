@@ -7,7 +7,29 @@
     <style><%@include file="../global-css.css"%></style>
     <style><%@include file="style.css"%></style>
 </head>
+
 <body>
 
+    <c:choose>
+        <c:when test="${logged}">
+            <c:import url="../header-secured/" />
+        </c:when>
+        <c:otherwise>
+            <c:import url="../header-normal/" />
+        </c:otherwise>
+    </c:choose>
+
+    <div class="car-overview block-center">
+        <div class="img-container" style="background-image: url(${thisCar.image})"></div>
+        <div class="text">
+            <p id="car-name">${thisCar.name}</p>
+            <p id="car-description">${thisCar.description}</p>
+            <p id="car-price">PRICE: $${thisCar.price}</p>
+            <p id="car-category">${thisCar.category}</p>
+        </div>
+    </div>
+
+
 </body>
+
 </html>

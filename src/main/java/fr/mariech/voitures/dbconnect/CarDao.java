@@ -34,6 +34,28 @@ public class CarDao {
         return cars;
     }
 
+    public Car fetchOneCar(String id) {
+        Car retrievedCar = null;
+        try {
+            String query = "SELECT car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category AND car.id = ?;";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, id);
+            ResultSet results = preparedStatement.executeQuery();
+            while (results.next()) {
+                String name = results.getString(1);
+                String description = results.getString(2);
+                String image = results.getString(3);
+                String category = results.getString(4);
+                double price = results.getDouble(5);
+                retrievedCar = new Car(name, description, image, category, price);
+                System.out.println(retrievedCar);
+            }
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+        return retrievedCar;
+    }
+
     public void insertCar(String name, String description, String image, int category, double price) {
         try {
             String query = "INSERT INTO car (name, description, image, category, price) VALUES (?,?,?,?,?)";

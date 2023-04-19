@@ -1,0 +1,51 @@
+.car-overview {
+    height: fit-content;
+    border: 1px solid grey;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.img-container {
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.car-overview a {
+    width: fit-content;
+}
+
+.car-overview .text {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    padding: 40px 20px;
+}
+
+#car-name {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+#car-price {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+#car-category {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 0px 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}

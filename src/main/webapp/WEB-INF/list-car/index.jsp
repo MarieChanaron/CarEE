@@ -15,14 +15,14 @@
         <c:if test="${cars == null}">
             <c:import url="/list-cars" />
         </c:if>
-        <c:forEach var="car" items="${cars}">
+        <c:forEach var="car" items="${cars}" varStatus="loop">
             <div class="car-card">
                 <div class="img-container" style="background-image: url(${car.image})"></div>
                 <div class="text">
                     <p>${car.name}</p>
                     <p>${car.category}</p>
                     <div class="btn-div">
-                        <a href="#">
+                        <a href="get-details?id=${loop.index+1}">
                             <button>DETAILS</button>
                         </a>
                         <c:if test="${logged}">
