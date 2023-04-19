@@ -9,5 +9,16 @@
 </head>
 <body>
 
+<c:import url="../header-secured/" />
+
+    <div id="add-category-section" class="section dark-bg padding">
+        <h1>Add Category</h1>
+        <form action="add-category" method="post">
+            <input name="name" type="text" placeholder="Name" autocomplete="off"/>
+            <button type="submit">Add category</button>
+        </form>
+    </div>
+
+
 </body>
 </html>

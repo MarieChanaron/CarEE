@@ -3,6 +3,7 @@ package fr.mariech.voitures.dbconnect;
 import fr.mariech.voitures.model.Car;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,4 +33,21 @@ public class CarDao {
         }
         return cars;
     }
+
+    public void insertCar(String name, String description, String image, int category, double price) {
+        try {
+            String query = "INSERT INTO car (name, description, image, category, price) VALUES (?,?,?,?,?)";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, description);
+            preparedStatement.setString(3, image);
+            preparedStatement.setInt(4, category);
+            preparedStatement.setDouble(5, price);
+            preparedStatement.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
+    }
+
+
 }

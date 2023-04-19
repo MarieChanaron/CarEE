@@ -2,10 +2,7 @@ package fr.mariech.voitures.dbconnect;
 
 import fr.mariech.voitures.model.Category;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +26,17 @@ public class CategoryDao {
             error.printStackTrace();
         }
         return categories;
+    }
+
+    public void insertCategory(String name) {
+        try {
+            String query = "INSERT INTO category (name) VALUES (?)";
+            PreparedStatement preparedStatement = connectionToDb.prepareStatement(query);
+            preparedStatement.setString(1, name);
+            preparedStatement.executeUpdate();
+        } catch (SQLException error) {
+            error.printStackTrace();
+        }
     }
 
 }

@@ -19,8 +19,8 @@
         <h1>Add Car</h1>
         <form action="add-car" method="post">
             <select name="category">
-                <c:forEach var="cat" items="${categories}">
-                    <option value="${cat.name}">${cat.name}</option>
+                <c:forEach var="cat" items="${categories}" varStatus="loop">
+                    <option value="${loop.index}">${cat.name}</option>
                 </c:forEach>
             </select>
             <input name="name" type="text" placeholder="Name" autocomplete="off"/>
