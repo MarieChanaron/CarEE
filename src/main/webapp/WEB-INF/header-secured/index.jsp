@@ -23,7 +23,7 @@
             </ul>
         </li>
         <li>
-            <a href="#">Logout</a>
+            <a href="logout">Logout</a>
         </li>
         <li>
             <a href="#">Icon</a>
