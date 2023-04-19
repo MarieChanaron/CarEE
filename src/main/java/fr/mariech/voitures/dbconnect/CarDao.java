@@ -13,7 +13,7 @@ public class CarDao {
     public List<Car> fetchCars() {
         List<Car> cars = new ArrayList<>();
         try {
-            String query = "SELECT name, description, image, category.nom, price FROM car INNER JOIN category WHERE category.id = car.category";
+            String query = "SELECT car.name, description, image, category.name, price FROM car INNER JOIN category WHERE category.id = car.category";
             Statement statement = connectionToDb.createStatement();
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
