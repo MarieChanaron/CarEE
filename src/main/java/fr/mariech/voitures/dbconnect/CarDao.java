@@ -13,7 +13,7 @@ public class CarDao {
     public List<Car> fetchCars() {
         List<Car> cars = new ArrayList<>();
         try {
-            String query = "SELECT * FROM Car";
+            String query = "SELECT * FROM car";
             Statement statement = connectionToDb.createStatement();
             ResultSet results = statement.executeQuery(query);
             while (results.next()) {
@@ -23,6 +23,7 @@ public class CarDao {
                 String category = results.getString("category");
                 int price = results.getInt("price");
                 Car car = new Car(name, description, image, category, price);
+                System.out.println(car);
                 cars.add(car);
             }
         } catch (SQLException error) {

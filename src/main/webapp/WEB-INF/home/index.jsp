@@ -15,7 +15,6 @@
 
 <body>
     <c:import url="../header-normal/" />
-    <h1>Homepage</h1>
     <c:import url="../list-car/" />
 </body>
 

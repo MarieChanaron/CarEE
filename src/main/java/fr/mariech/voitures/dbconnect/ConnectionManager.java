@@ -9,7 +9,7 @@ public class ConnectionManager {
     public static Connection INSTANCE;
 
     public static Connection openConnection() {
-        String url = "jdbc:mysql://localhost:3306/db-posts";
+        String url = "jdbc:mysql://localhost:3306/db-voitures";
         String user = "root";
         String pwd = "emRS1M989G%q";
         try {

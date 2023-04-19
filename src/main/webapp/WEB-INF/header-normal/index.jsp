@@ -10,7 +10,7 @@
 <body>
 
     <header class="padding">
-        <img src="" alt="Logo">
+        <p style="font-size: 32px">&#128664;</p>
         <nav>
             <ul>
                 <li><a href="#" class="turquoise bold">Home</a></li>
@@ -21,7 +21,7 @@
                     <a href="#" class="turquoise bold">Login</a>
                 </li>
                 <li>
-                    <a href="#" class="turquoise bold">Icon</a>
+                    <a href="#" class="turquoise bold">&#128269;</a>
                 </li>
             </ul>
         </nav>
