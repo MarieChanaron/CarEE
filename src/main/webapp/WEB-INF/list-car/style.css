@@ -25,12 +25,3 @@
 .car-card a {
     width: fit-content;
 }
-
-.btn-div {
-    display: flex;
-    grid-gap: 8px;
-}
-
-.red {
-    background-color: #d31e2d;
-}

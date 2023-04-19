@@ -63,3 +63,12 @@ body {
     display: block;
     margin: auto;
 }
+
+.btn-div {
+    display: flex;
+    grid-gap: 8px;
+}
+
+.red {
+    background-color: #d31e2d;
+}

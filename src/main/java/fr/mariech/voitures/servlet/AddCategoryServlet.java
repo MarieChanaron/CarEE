@@ -13,7 +13,6 @@ import java.io.IOException;
 public class AddCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("in add category servlet");
         request.getRequestDispatcher("/WEB-INF/add-category/").forward(request, response);
     }
 

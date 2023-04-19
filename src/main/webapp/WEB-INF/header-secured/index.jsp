@@ -20,8 +20,8 @@
                 <li>
                     <a href="#" class="turquoise bold">Administration</a>
                     <ul>
-                        <li><a href="add-car" class="turquoise bold">Add Car</a></li>
-                        <li><a href="add-category" class="turquoise bold">Add Category</a></li>
+                        <li><a href="auth/add-car" class="turquoise bold">Add Car</a></li>
+                        <li><a href="auth/add-category" class="turquoise bold">Add Category</a></li>
                     </ul>
                 </li>
                 <li>

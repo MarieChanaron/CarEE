@@ -17,6 +17,16 @@
         <c:forEach var="cat" items="${categories}">
             <div class="cat-container">
                 <span>${cat.name}</span>
+                <c:if test="${logged}">
+                    <div class="btn-div">
+                        <a href="#">
+                            <button>EDIT</button>
+                        </a>
+                        <a href="#">
+                            <button class="red">DELETE</button>
+                        </a>
+                    </div>
+                </c:if>
             </div>
         </c:forEach>
     </div>

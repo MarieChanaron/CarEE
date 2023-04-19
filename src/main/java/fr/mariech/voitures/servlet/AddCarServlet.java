@@ -19,7 +19,6 @@ public class AddCarServlet extends HttpServlet {
         if (session.getAttribute("categories") == null) {
             CategoryDao categoryDao = new CategoryDao();
             List<Category> categories = categoryDao.fetchCategories();
-            System.out.println(categories);
             session.setAttribute("categories", categories);
         }
         request.getRequestDispatcher("/WEB-INF/add-car/").forward(request, response);
