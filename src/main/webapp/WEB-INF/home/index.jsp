@@ -5,13 +5,18 @@
 
 <head>
     <title>CarEE | Home</title>
+    <style><%@include file="../global-css.css"%></style>
     <style><%@include file="style.css"%></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
     <c:import url="../header-normal/" />
     <h1>Homepage</h1>
+    <c:import url="../list-car/" />
 </body>
 
 </html>

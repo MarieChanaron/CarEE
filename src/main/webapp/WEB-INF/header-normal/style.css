@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 16px;
+    padding-right: 16px;
+}

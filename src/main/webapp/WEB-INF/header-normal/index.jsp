@@ -9,11 +9,28 @@
 <html>
 <head>
     <title>Title</title>
+    <style><%@include file="../global-css.css"%></style>
     <style><%@include file="style.css"%></style>
 </head>
 <body>
 
-    <h1>This is my header</h1>
+    <header class="padding">
+        <img src="" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#" class="turquoise bold">Home</a></li>
+                <li>
+                    <a href="#" class="turquoise bold">Category List</a>
+                </li>
+                <li>
+                    <a href="#" class="turquoise bold">Login</a>
+                </li>
+                <li>
+                    <a href="#" class="turquoise bold">Icon</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 </body>
 </html>

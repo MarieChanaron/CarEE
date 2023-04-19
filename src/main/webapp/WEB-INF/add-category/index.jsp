@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Title</title>
+    <style><%@include file="../global-css.css"%></style>
     <style><%@include file="style.css"%></style>
 </head>
 <body>
