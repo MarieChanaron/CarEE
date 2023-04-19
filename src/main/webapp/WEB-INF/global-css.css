@@ -52,3 +52,7 @@ h1 {
     font-size: 1.8rem;
     text-align: center;
 }
+
+body {
+    padding-top: 100px;
+}

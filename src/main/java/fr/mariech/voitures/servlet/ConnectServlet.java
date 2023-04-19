@@ -17,8 +17,6 @@ public class ConnectServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String login = request.getParameter("login");
         String password = request.getParameter("password");
-        System.out.println(login);
-        System.out.println(password);
         AdminDao adminDao = new AdminDao();
         if (adminDao.checkCredentials(login, password)) {
             HttpSession session = request.getSession();

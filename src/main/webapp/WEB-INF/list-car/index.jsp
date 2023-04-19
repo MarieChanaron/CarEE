@@ -21,9 +21,16 @@
                 <div class="text">
                     <p>${car.name}</p>
                     <p>${car.category}</p>
-                    <a href="#">
-                        <button>DETAILS</button>
-                    </a>
+                    <div class="btn-div">
+                        <a href="#">
+                            <button>DETAILS</button>
+                        </a>
+                        <c:if test="${logged}">
+                            <a href="#">
+                                <button class="red">DELETE</button>
+                            </a>
+                        </c:if>
+                    </div>
                 </div>
             </div>
         </c:forEach>

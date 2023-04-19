@@ -14,7 +14,16 @@
 
 
 <body>
-    <c:import url="../header-normal/" />
+
+    <c:choose>
+        <c:when test="${logged}">
+            <c:import url="../header-secured/" />
+        </c:when>
+        <c:otherwise>
+            <c:import url="../header-normal/" />
+        </c:otherwise>
+    </c:choose>
+
     <c:import url="../list-car/" />
 </body>
 
