@@ -8,6 +8,7 @@
     <style><%@include file="style.css"%></style>
 </head>
 <body>
-
+    <c:import url="../header-normal/" />
+    <c:import url="../categories/" />
 </body>
 </html>

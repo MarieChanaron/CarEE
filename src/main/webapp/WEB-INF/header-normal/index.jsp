@@ -13,7 +13,7 @@
         <p style="font-size: 32px">&#128664;</p>
         <nav>
             <ul>
-                <li><a href="#" class="turquoise bold">Home</a></li>
+                <li><a href="home" class="turquoise bold">Home</a></li>
                 <li>
                     <a href="list-category" class="turquoise bold">Category List</a>
                 </li>

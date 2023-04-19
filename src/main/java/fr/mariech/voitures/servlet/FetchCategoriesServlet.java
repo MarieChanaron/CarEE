@@ -19,7 +19,7 @@ public class FetchCategoriesServlet extends HttpServlet {
             List<Category> categories = categoryDao.fetchCategories();
             System.out.println(categories);
             session.setAttribute("categories", categories);
-            request.getRequestDispatcher("/WEB-INF/list-categories/").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/categories/").forward(request, response);
         }
     }
 
