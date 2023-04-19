@@ -33,6 +33,8 @@
     </c:if>
 
     <c:import url="../list-car/" />
+
+    <c:import url="../our-services/" />
 </body>
 
 </html>
