@@ -18,7 +18,7 @@
 
     <div id="login-section" class="section dark-bg padding">
         <h1>Login page</h1>
-        <form action="connect" method="post">
+        <form action="connect" method="post" autocomplete="off">
             <input name="login" type="text" />
             <input name="password" type="password" />
             <button type="submit">Login</button>
