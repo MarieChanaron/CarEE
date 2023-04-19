@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>Title</title>
+    <style><%@include file="style.css"%></style>
 </head>
 <body>
+
+    <h1>This is my header</h1>
 
 </body>
 </html>

@@ -1,16 +1,17 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Marie
-  Date: 19/04/2023
-  Time: 10:38
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
 <html>
+
 <head>
     <title>CarEE | Home</title>
+    <style><%@include file="style.css"%></style>
 </head>
+
+
 <body>
-<h1>Homepage</h1>
+    <c:import url="../header-normal/" />
+    <h1>Homepage</h1>
 </body>
+
 </html>
